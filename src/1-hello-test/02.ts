@@ -1,4 +1,28 @@
-const student = {
+type StudentType = {
+    id: number,
+    name: string,
+    age: number,
+    isActive: boolean,
+    address: AddressType,
+    technologies: Array<TechnologiesType>
+}
+
+type AddressType = {
+    streetTitle: string,
+    city: CityType
+}
+
+type CityType = {
+    title: string,
+    countryTitle: string,
+}
+
+type TechnologiesType = {
+    id: number,
+    title: string
+}
+
+const student: StudentType = {
     id: 1,
     name: 'Valry',
     age: 29,
@@ -32,3 +56,4 @@ const student = {
 
 console.log(student.address.city.title)
 console.log(student.technologies[2].id)
+
